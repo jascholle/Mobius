@@ -1,0 +1,9 @@
+{% if ordered_person_list %}
+<ul>
+    {% for person in ordered_person_list %}
+    <li><a href="/tdlist/{{ person.id }}/bump">{{ person.name }} -- {{ person.order }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No people are available.</p>
+{% endif %}
